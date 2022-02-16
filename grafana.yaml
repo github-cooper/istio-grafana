@@ -49,7 +49,7 @@ data:
       name: Prometheus
       orgId: 1
       type: prometheus
-      url: http://prometheus:9090
+      url: http://istio-prometheus-server:9090
   dashboardproviders.yaml: |
     apiVersion: 1
     providers:
