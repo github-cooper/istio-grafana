@@ -9,7 +9,6 @@ metadata:
     app.kubernetes.io/instance: grafana
     app.kubernetes.io/version: "8.3.1"
     app.kubernetes.io/managed-by: Helm
-    app.gregg.test: true
   name: grafana
   namespace: istio-system
 ---
