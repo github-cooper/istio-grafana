@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: grafana.gdixon.io
+  - host: grafana.kubernetes.docker.internal
     http:
       paths:
       - path: /
@@ -20,5 +20,5 @@ spec:
               number: 3000
   tls:
   - hosts:
-    - grafana.gdixon.io
+    - grafana.kubernetes.docker.internal
     secretName: your-certificate-name
