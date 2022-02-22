@@ -1,24 +1,24 @@
-#apiVersion: networking.k8s.io/v1
-#kind: Ingress
-#metadata:
-#  name: grafana-server-ingress
-#  namespace: istio-system
-#  annotations:
-#    ingress.kubernetes.io/rewrite-target: /
-#spec:
-#  ingressClassName: nginx
-#  rules:
-#  - host: grafana.kubernetes.docker.internal
-#    http:
-#      paths:
-#      - path: /
-#        pathType: Prefix
-#        backend:
-#          service:
-#            name: grafana
-#            port:
-#              number: 3000
-#  tls:
-#  - hosts:
-#    - grafana.kubernetes.docker.internal
-#    secretName: your-certificate-name
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana-server-ingress
+  namespace: istio-system
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: grafana.aks-uk.uksouth.cloudapp.azure.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: grafana
+            port:
+              number: 3000
+  tls:
+  - hosts:
+    - grafana.aks-uk.uksouth.cloudapp.azure.com
+    secretName: your-certificate-name
